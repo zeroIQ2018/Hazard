@@ -1,77 +1,31 @@
 <!doctype html>
 <html style="background-color:rgb(74, 74, 78) ;">
-<head>
-    
-<meta charset="UTF-8">
 
-</head>
-<body>
-<h1>Feiglingsspiel</h1>
-<button type="button"  id="0" onclick="playerchoice(0);" >Ausweichen</button>
-<button type="button"  id="1" onclick="playerchoice(1);" >Weiterfahren</button>
 
-<p id="3"></p>
-<P id="4"></P>
-
-<script>
-
-var e;
-   function playerchoice(e){
-        document.getElementById("3").innerHTML = e
+    <head>
         
-    }
-    
-    var y = Math.random();
-    if (y < 0.5)
-    y = 0;
-    else
-    y= 1;
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="{{ url_for('static', filename='logic.js') }}"></script>
 
-    // random for enemy
-    
-    console.log(y);
+    </head>
 
 
-    
-    // this is also just for debuging
-    document.write(y);
-    document.write(playerchoice(e));
-    conosle.log("yes it works stfu");
-    var ba;
-    ba = 1;
-    // if statments
-    while (ba === 1){
-    if (playerchoice !== undefined) 
-    {       document.write("cringe");
-            if (choice === 1 && y === 1){
-                console.log("11");
-                document.write("Tod");
+            <body>
 
-            } else if (choice === 0 && y === 0){
-                console.log("00");
-                document.write("Beide entkommen den Tod");
-            } else if (choice === 1 && y === 0) {
-                console.log("10");
-                document.write("Gegner versucht auszuweichen. Spieler fährt weiter. Spieler gewinnt");
-            } else if (choice === 0 && y === 1) 
-            {
-                console.log("01");
-                document.write("Spieler versucht auszuweichen. Gegner fährt weiter. Gegner gewinnt");
-            } 
-            else {
-                document.write(" it didnt work");
-            }
-    }
-            }
+            <h1>Feiglingsspiel</h1>
 
-</script>
+            <button type="btn0" onclick="clickFunction(0)">Ausweichen</button>
+            <button type="btn1" onclick="clickFunction(1)">Weiterfahren</button>
+            
 
-<p href="https://de.wikipedia.org/wiki/Feiglingsspiel">https://de.wikipedia.org/wiki/Feiglingsspiel</p>
+            <p id="3"></p>
+            <P id="4"></P>
+
+            
 
 
+            <p href="https://de.wikipedia.org/wiki/Feiglingsspiel">https://de.wikipedia.org/wiki/Feiglingsspiel</p>
 
+            </body>
 
-
-
-</body>
-</html>
+    </html>
