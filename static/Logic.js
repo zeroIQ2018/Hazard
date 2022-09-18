@@ -1,4 +1,4 @@
-    
+ 
     //write the choice of the player i forgor how????? why tf is the element with id "3" the one with 
 
     var choice;
@@ -34,7 +34,8 @@
     // if statment
     // or should i use switch statements
     //does it only check at the start or should i use a loop??????
-       
+while (choice = undefined) 
+{
     if (choice === 1 && y === 1)
     {
         console.log("11");
@@ -64,4 +65,4 @@
     {
         document.write(" it didnt work");
     }
-   
+}
