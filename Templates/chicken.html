@@ -7,28 +7,25 @@
 </head>
 <body>
 <h1>Feiglingsspiel</h1>
-<button type="button"  id="0" onclick="playerchoice(0)" >Ausweichen</button>
-<button type="button"  id="1" onclick="playerchoice(1)" >Weiterfahren</button>
+<button type="button"  id="0" onclick="playerchoice(0);" >Ausweichen</button>
+<button type="button"  id="1" onclick="playerchoice(1);" >Weiterfahren</button>
 
 <p id="3"></p>
 <P id="4"></P>
 
 <script>
 
-
-    
-
-
-    function playerchoice(e){
+var e;
+   function playerchoice(e){
         document.getElementById("3").innerHTML = e
         
     }
     
     var y = Math.random();
     if (y < 0.5)
-    y = 0
+    y = 0;
     else
-    y= 1
+    y= 1;
 
     // random for enemy
     
@@ -40,29 +37,32 @@
     document.write(y);
     document.write(playerchoice(e));
     conosle.log("yes it works stfu");
-    
+    var ba;
+    ba = 1;
     // if statments
+    while (ba === 1){
     if (playerchoice !== undefined) 
-    {
-            if (choice == 1 && y == 1){
-                console.log("11")
+    {       document.write("cringe");
+            if (choice === 1 && y === 1){
+                console.log("11");
                 document.write("Tod");
 
-            } else if (choice = 0 && y == 0){+
-                console.log("00")
+            } else if (choice === 0 && y === 0){
+                console.log("00");
                 document.write("Beide entkommen den Tod");
-            } else if (choice == 1 && y == 0) {
-                console.log("10")
+            } else if (choice === 1 && y === 0) {
+                console.log("10");
                 document.write("Gegner versucht auszuweichen. Spieler fährt weiter. Spieler gewinnt");
-            } else if (choice == 0 && y == 1) 
+            } else if (choice === 0 && y === 1) 
             {
-                console.log("01")
+                console.log("01");
                 document.write("Spieler versucht auszuweichen. Gegner fährt weiter. Gegner gewinnt");
             } 
             else {
-                document.write(" it didnt work")
+                document.write(" it didnt work");
             }
     }
+            }
 
 </script>
 
