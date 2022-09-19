@@ -28,7 +28,8 @@
     y = 1
     }
 
-
+    document.write(y);
+    document.write(choice);
 
     console.log(y);
     // if statment
