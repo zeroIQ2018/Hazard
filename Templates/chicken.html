@@ -6,24 +6,21 @@
 
 <meta charset="UTF-8">
 <link rel="shortcut icon" href="{{ url_for('static', filename='car-crash.png') }}">
-</head>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}"></head> 
+        <body>  
+                <div class="btn1">
+                <h1>Feiglingsspiel</h1>
+                <button id="btn0" type="btn0" onclick="clickFunction(0);" value=" + ">Ausweichen</button>
+                <button id="btn1" type="btn1" onclick="clickFunction(1);" value=" + ">Weiterfahren</button>
+                </div>
 
+                <b><p id="3"></p></b>
 
-        <body>
+                
 
-        <h1>Feiglingsspiel</h1>
-
-        <button type="btn0" onclick="clickFunction(0);">Ausweichen</button>
-        <button type="btn1" onclick="clickFunction(1);">Weiterfahren</button>
-        
-
-        <b><p id="3"></p></b>
-
-        
-
-
-        <p href="https://de.wikipedia.org/wiki/Feiglingsspiel">https://de.wikipedia.org/wiki/Feiglingsspiel</p>
-        <script type="text/javascript" src="{{ url_for('static', filename='logic.js') }}"></script>
+                
+                <a href="https://de.wikipedia.org/wiki/Feiglingsspiel">https://de.wikipedia.org/wiki/Feiglingsspiel</a>
+                <script type="text/javascript" src="{{ url_for('static', filename='logic.js') }}"></script>
         </body>
 
 </html>
