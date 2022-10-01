@@ -1,19 +1,16 @@
- 
-//write the choice of the player i forgor how????? why tf is the element with id "3" the one with 
+function sleep(ms){
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
+//write the choice of the player i forgor how????? why tf is the element with id "3" the one with 
 var choice;
+
+
 function clickFunction(choice){
-    /*idk why i did this in retarded but im keeping this for the future for flipping a number between 0 and 1
-        if (choice === 0)
-        {
-            choice = 1;
-        }
-    else {
-        choice = 0;
-    }
-    */
     console.log(choice)
-    }
+} 
+
+
 
 // does the choice for the enemy 
 // its literally just 1 or 0
@@ -26,11 +23,10 @@ else {
 y = 1
 }
 
-function sleep(ms){
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+
 
 console.log(y);
+console.log(choice);
 console.log(typeof(y));
 console.log(typeof(choice));
 
@@ -38,37 +34,32 @@ console.log(typeof(choice));
 // or should i use switch statements
 //does it only check at the start or should i use a loop??????
 
-if (choice === 1 && y === 1)
-{
-    console.log("11");
-    document.log("beide sterben")
-    
-} 
+function ifs(){
+sleep(500,);
+switch (typeof choice != 'undefined') {
+    case (choice == 1 && y == 1):
+        console.log("11");
+        document.getElementById("3").innerHTML = "beide sterben";
+        break;
 
-else if (choice === 0 && y === 0)
-{
-    console.log("00");
-    document.write("Beide entkommen den Tod");
-    
-} 
+    case (choice == 0 && y == 0):
+        console.log("00");
+        document.getElementById("3").innerHTML = "Beide entkommen den Tod";
+        break;
 
-else if (choice === 1 && y === 0)
-{
-    console.log("10");
-    document.write("Gegner versucht auszuweichen. Spieler fährt weiter. Spieler gewinnt");
-    
-} 
+    case (choice == 1 && y == 0):
+        console.log("10");
+        document.getElementById("3").innerHTML = "Gegner versucht auszuweichen. Spieler fährt weiter. Spieler gewinnt";
+        break;
 
-else if (choice === 0 && y === 1) 
-{
-    console.log("01");
-    document.write("Spieler versucht auszuweichen. Gegner fährt weiter. Gegner gewinnt");
+    case (choice == 0 && y == 1):
+        console.log("01");
+        document.getElementById("3").innerHTML = "Spieler versucht auszuweichen. Gegner fährt weiter. Gegner gewinnt";
+        break;     
     
-} 
-
-else 
-{
-    
-
+    default:
+        document.getElementById("3").innerHTML = "didnt work";
 
 }
+}
+ifs();
