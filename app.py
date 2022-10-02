@@ -3,8 +3,8 @@ import sys
 import os
 import logging
 
-template_dir = os.path.abspath('../Soulify/App/templates/')
-static_dir = os.path.abspath('../Soulify/App/UI/static/')
+template_dir = os.path.abspath('/templates/')
+static_dir = os.path.abspath('/static/')
 app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
 
 @app.route("/")
