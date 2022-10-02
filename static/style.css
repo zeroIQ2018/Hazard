@@ -2,13 +2,6 @@
 
 
 
-.div2 {
-    background-color:rgb(0, 0, 0);
-    border-style: solid;
-    border-color: white;
-    border: 5px;
-}
-
 
 .car {
     width: 300px;
@@ -30,6 +23,7 @@ button {
 
 html {
     text-align: center;
+    background-color: black;
 }
 
 
