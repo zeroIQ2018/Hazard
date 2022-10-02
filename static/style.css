@@ -1,9 +1,20 @@
 body {
-    background-color:rgb(74, 74, 78);
+    background-color:rgb(0, 0, 0);
 }
 
 #div1 {
-    background-color: rgb(75, 75, 75);
+    
+}
+
+
+
+h1, h2, h3, h4, h5 , p{
+    color: white;
+}
+
+button {
+    color: black;
+    background-color: white;
 }
 
 html {
@@ -16,4 +27,6 @@ html {
     margin-right: auto;
     text-align: center;
     border: 1px solid;
+    background-color: black;
+    color: white;
   }
