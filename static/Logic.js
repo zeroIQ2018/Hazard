@@ -26,9 +26,9 @@ function clickCounter(amount) {
       } else {
         sessionStorage.clickcount = 1;
       }
-      document.getElementById("z").innerHTML = "You have " + sessionStorage.clickcount + " points";
+      document.getElementById("z").innerHTML = "Du hast " + sessionStorage.clickcount + " Punkte";
     } else {
-      document.getElementById("z").innerHTML = "Sorry, your browser does not support web storage...";
+      document.getElementById("z").innerHTML = "Dein Browser unterstützt locale speicherung nicht";
     }
   }
 
@@ -39,9 +39,9 @@ function clickCounter(amount) {
       } else {
         sessionStorage.clickcount2 = 1;
       }
-      document.getElementById("x").innerHTML = "The enemy has " + sessionStorage.clickcount2 + " points";
+      document.getElementById("x").innerHTML = "Der Gegner " + sessionStorage.clickcount2 + " Punkte";
     } else {
-      document.getElementById("x").innerHTML = "Sorry, your browser does not support web storage...";
+      document.getElementById("x").innerHTML = "Dein Browser unterstützt locale speicherung nicht";
     }
   }
 
@@ -85,7 +85,7 @@ function clickFunction(choice){
             break;     
         
         default:
-            document.getElementById("3").innerHTML = "didnt work";
+            document.getElementById("3").innerHTML = ":/";
             buttondisable();
             clickCounter();
             break
