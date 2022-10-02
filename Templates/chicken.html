@@ -1,25 +1,57 @@
 <!doctype html>
-<html style="background-color:rgb(74, 74, 78) ;">
+<html >
 
 
 <head>
-
 <meta charset="UTF-8">
 <link rel="shortcut icon" href="{{ url_for('static', filename='car-crash.png') }}">
-<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}"></head> 
-        <body>  
-                <div class="btn1">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+</head> 
+
+        <body> 
+                <div id="div1">
                 <h1>Feiglingsspiel</h1>
                 <button id="btn0" type="btn0" onclick="clickFunction(0);" value=" + ">Ausweichen</button>
                 <button id="btn1" type="btn1" onclick="clickFunction(1);" value=" + ">Weiterfahren</button>
                 </div>
-
+        
                 <b><p id="3"></p></b>
-
-                
-
-                
                 <a href="https://de.wikipedia.org/wiki/Feiglingsspiel">https://de.wikipedia.org/wiki/Feiglingsspiel</a>
+
+                <p id="z"></p>
+                <p id="x"></p>
+
+                <br>
+                <br>
+                <br>
+                <h3>Bepunktung:</h3>
+                <table class="center">
+                        <tbody>
+                                <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <th colspan="2" style="text-align:center">Spieler 2</th>
+                                </tr>
+                                <tr class="onlythese">
+                                        <td></td>
+                                        <td></td>
+                                        <th class="onlythese">Ausweichen</th>
+                                        <th class="onlythese">Weiterfahren</th>
+                                </tr class="onlythese">
+                                <tr class="onlythese">
+                                        <th rowspan="2" style="text-align:center" class="onlythese">Spieler 1</th>
+                                        <th class="onlythese">Ausweichen</th>
+                                        <td style="text-align:center" class="onlythese">1/1</td>
+                                        <td style="text-align:center" class="onlythese">-1/2</td>
+                                </tr class="onlythese">
+                                <tr class="onlythese">
+                                        <th class="onlythese">Weiterfahren</th>
+                                        <td style="text-align:center" class="onlythese">2/-1</td>
+                                        <td style="text-align:center" class="onlythese">-3/-3</td>
+                                </tr class="onlythese">
+                        </tbody>
+                </table>
+
                 <script type="text/javascript" src="{{ url_for('static', filename='logic.js') }}"></script>
         </body>
 
