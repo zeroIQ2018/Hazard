@@ -1,9 +1,20 @@
-body {
+
+
+
+
+.div2 {
     background-color:rgb(0, 0, 0);
+    border-style: solid;
+    border-color: white;
+    border: 5px;
 }
 
-#div1 {
-    
+
+.car {
+    width: 300px;
+    height: auto;
+    margin-left: 50%;
+    float: left;
 }
 
 

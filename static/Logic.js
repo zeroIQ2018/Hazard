@@ -101,5 +101,3 @@ console.log(y);
 console.log(choice);
 console.log(typeof(y));
 console.log(typeof(choice));
-
-
