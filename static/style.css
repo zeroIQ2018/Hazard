@@ -1,7 +1,9 @@
 
 
 
-
+#res{
+    
+}
 
 .car {
     width: 300px;
@@ -19,7 +21,13 @@ h1, h2, h3, h4, h5 , p{
 button {
     color: black;
     background-color: white;
+    border-style: solid;
 }
+
+button:disabled {
+    color: #000000;
+    background-color: grey;
+  }
 
 html {
     text-align: center;

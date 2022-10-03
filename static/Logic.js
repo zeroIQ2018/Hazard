@@ -2,6 +2,8 @@ var choice;
 var amount;
 var amount2;
 var y = Math.random();
+
+
 if (y < 0.5){
     y = 0;
     }
@@ -9,6 +11,11 @@ if (y < 0.5){
     y = 1;
     }
 
+
+function ena(){
+  document.getElementById("dis").disabled=false
+  document.getElementById("dis").innerHTML= "Hier drücken um das Spiel neu zu starten"
+}
 
 function buttondisable(){
     document.getElementById("btn0").disabled=true;
@@ -57,7 +64,8 @@ function clickFunction(choice){
             document.getElementById("3").innerHTML = "beide sterben";
             buttondisable();
             clickCounter(-3);
-            clickCounter2(-3); 
+            clickCounter2(-3);
+            ena(); 
             break;
     
         case (choice === 0 && y === 0):
@@ -66,6 +74,7 @@ function clickFunction(choice){
             buttondisable();
             clickCounter(1);
             clickCounter2(1);
+            ena();
             break;
     
         case (choice === 1 && y === 0):
@@ -74,6 +83,7 @@ function clickFunction(choice){
             buttondisable();
             clickCounter(2);
             clickCounter2(-1);
+            ena();
             break;
     
         case (choice === 0 && y === 1):
@@ -82,12 +92,14 @@ function clickFunction(choice){
             buttondisable();
             clickCounter(-1);
             clickCounter2(2);
+            ena();
             break;     
         
         default:
             document.getElementById("3").innerHTML = ":/";
             buttondisable();
             clickCounter();
+            ena();
             break
     
     }
