@@ -55,7 +55,6 @@ function clickCounter(amount) {
 
 
 
-
 function clickFunction(choice){
     console.log(choice);
     switch (typeof choice !== 'undefined') {
@@ -107,9 +106,3 @@ function clickFunction(choice){
 
 
 
-
-
-console.log(y);
-console.log(choice);
-console.log(typeof(y));
-console.log(typeof(choice));
