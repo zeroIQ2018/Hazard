@@ -113,6 +113,3 @@ function clickFunction(choice){
     
     }
 } 
-
-
-
