@@ -9,6 +9,10 @@ app = Flask(__name__, template_folder="templates", static_folder="static")
 def home():
     return render_template("index.html")
 
+@app.route("/options")
+def options():
+    return render_template("ops.html")
+
 
 if __name__ == "__main__":
     app.run()

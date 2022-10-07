@@ -24,6 +24,10 @@ button {
     border-style: solid;
 }
 
+p{
+    color: white;
+}
+
 button:disabled {
     color: #000000;
     background-color: grey;

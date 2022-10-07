@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='car-crash.png') }}">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    </head>
+
+    <body>
+        <h1>Optionen</h1>
+        <p id="state">Punkte speicher ist an</p>
+        <button onclick="ops();">Punkt speicherung umschalten</button>
+        <script src="{{ url_for('static', filename='option.js') }}"></script>
+    </body>
+</html>

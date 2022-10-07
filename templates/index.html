@@ -7,9 +7,9 @@
 <link rel="shortcut icon" href="{{ url_for('static', filename='car-crash.png') }}">
 <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
 </head> 
-
+        
         <body> 
-               
+        
                
                 <h1>Hazard</h1>
                 <img src="{{ url_for('static', filename='amo.png') }}" id="amo">
@@ -48,17 +48,19 @@
                                 <tr class="onlythese">
                                         <th rowspan="2" style="text-align:center" class="onlythese">Spieler 1</th>
                                         <th class="onlythese">Ausweichen</th>
-                                        <td style="text-align:center" class="onlythese">1/1</td>
-                                        <td style="text-align:center" class="onlythese">-1/2</td>
+                                        <td style="text-align:center" class="onlythese">6/6</td>
+                                        <td style="text-align:center" class="onlythese">2/8</td>
                                 </tr class="onlythese">
                                 <tr class="onlythese">
                                         <th class="onlythese">Weiterfahren</th>
-                                        <td style="text-align:center" class="onlythese">2/-1</td>
-                                        <td style="text-align:center" class="onlythese">-3/-3</td>
+                                        <td style="text-align:center" class="onlythese">8/2</td>
+                                        <td style="text-align:center" class="onlythese">0/0</td>
                                 </tr class="onlythese">
                         </tbody>
                 </table>
-
+                <a href="/options">
+                <button >Zu den Optionen</button>
+                </a>
                 <script src="{{ url_for('static', filename='Logic.js') }}"></script>
         </body>
 
