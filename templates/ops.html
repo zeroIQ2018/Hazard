@@ -7,8 +7,12 @@
 
     <body>
         <h1>Optionen</h1>
-        <p id="state">Punkte speicher ist an</p>
-        <button onclick="ops();">Punkt speicherung umschalten</button>
+        <p id="state"></p>
+        <button onmousedown="opse();">Punkt speicherung umschalten</button>
+        <br>
+        <a href="/">
+        <button>Zum "Spiel" zurückkehren</button>
+        </a>
         <script src="{{ url_for('static', filename='option.js') }}"></script>
     </body>
 </html>

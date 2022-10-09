@@ -1,17 +1,25 @@
-if (typeof(Storage) !== "undefined") {
-    sessionStorage.opnr = Number(sessionStorage.clickcount) 
-    sessionStorage.opnr = 1
-  }
+if(localStorage.getItem("Opnr") == 1){
+    document.getElementById("state").innerHTML ="Punkte speicher ist aus"
+}
+else{
+    document.getElementById("state").innerHTML ="Punkte speicher ist an"
+}
 
-function ops() {
+function opse() {
     switch(typeof(Storage) !== "undefined"){
-        case (sessionStorage.opnr == 1):
-            sessionStorage.opnr = 0;
-            document.getElementById("state") = "Punkte speicher ist aus"
+        case (localStorage.getItem("opnr") == 1):
+            localStorage.setItem('opnr', 0);
+            document.getElementById("state").innerHTML = "Punkte speicher ist aus"
+            console.log(localStorage.getItem("opnr"));
+            break
+
+        case (localStorage.getItem("opnr") == 0):
+            localStorage.setItem('opnr', 1);
+            document.getElementById("state").innerHTML = "Punkte speicher ist an"
+            console.log(localStorage.getItem("opnr"));
+            break
         
-        case (sessionStorage.opnr == 0):
-            sessionStorage.opnr = 1;
-            document.getElementById("state") = "Punkte speicher ist an"
-            console.log(sessionStorage.opnr);
+        default:
+            console.log("default");
     }
 }

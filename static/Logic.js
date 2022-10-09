@@ -2,7 +2,7 @@ var choice;
 var amount;
 var amount2;
 var y = Math.random();
-
+console.log(localStorage.getItem("opnr"));
 if (y < 0.5){
     y = 0;
     }
@@ -10,55 +10,55 @@ if (y < 0.5){
     y = 1;
     }
 
+if(localStorage.getItem('opnr') == 0)
+{
+  document.getElementById("cur").innerHTML = "Punkte Speichern ist aus"
+}
+else
+{
+  document.getElementById("cur").innerHTML = "Punkte Speichern ist an"
+}
 
-function ena(){
+function ena()
+{
   document.getElementById("dis").disabled=false
   document.getElementById("dis").innerHTML= "Hier drücken um das Spiel neu zu starten"
 }
 
-function buttondisable(){
+function buttondisable()
+{
     document.getElementById("btn0").disabled=true;
     document.getElementById("btn1").disabled=true;
 }
 
-while(true){
-    document.getElementById("z").innerHTML = clickcount;
+
+
+function Punkte1(amount) 
+{
+  if (localStorage.getItem('opnr') == 1) 
+  {   
+      localStorage.cl1 + amount
+      document.getElementById("z").innerHTML = "Du hast " + localStorage.cl1 + " Punkte";
+  } 
+  
+
+  else
+  {
+    document.getElementById("z").innerHTML = "Du hast "  + amount + " Punkte";
+  }
 }
 
-function clickCounter(amount) {
-  if (sessionStorage.opnr == 1) {
-    if (typeof(Storage) !== "undefined") {
-        if (sessionStorage.clickcount) {
-          sessionStorage.clickcount = Number(sessionStorage.clickcount)+amount;
-        } else {
-          sessionStorage.clickcount = 1;
-        }
-        document.getElementById("z").innerHTML = "Du hast " + sessionStorage.clickcount + " Punkte";
-      } else { 
-        document.getElementById("z").innerHTML = "Dein Browser unterstützt locale speicherung nicht";
-      }
-      }
-  else{
-    document.getElementById("z") = amount
-  }
-  }
+  function Punkte2(amount2) 
+  {
+    if (localStorage.getItem('opnr') == 1) 
+    {     
 
-  function clickCounter2(amount2) {
-    if (sessionStorage.opnr == 1) {
-      if (typeof(Storage) !== "undefined") {
-        if (sessionStorage.clickcount2) {
-          sessionStorage.clickcount2 = Number(sessionStorage.clickcount2)+amount2;
-        } 
-        else {
-          sessionStorage.clickcount2 = 1;
-        }
-        document.getElementById("x").innerHTML = "Der Gegner " + sessionStorage.clickcount2 + " Punkte";
-      } else {
-        document.getElementById("x").innerHTML = "Dein Browser unterstützt locale speicherung nicht";
-      }
-      }
+      localStorage.cl2 + amount2
+      document.getElementById("x").innerHTML = "Er hat " + localStorage.cl2 + " Punkte";
+    }
+
     else{
-      document.getElementById("x") = amount2
+      document.getElementById("x").innerHTML = "Er hat " + amount2+ " Punkte";
     }
   }
 
@@ -67,13 +67,14 @@ function clickCounter(amount) {
 
 function clickFunction(choice){
     console.log(choice);
-    switch (typeof choice !== 'undefined') {
+    switch (typeof choice !== 'undefined') 
+    {
         case (choice === 1 && y === 1):
             console.log("11");
             document.getElementById("3").innerHTML = "beide sterben";
             buttondisable();
-            clickCounter(0);
-            clickCounter2(0);
+            Punkte1(0);
+            Punkte2(0);
             ena(); 
             break;
     
@@ -81,8 +82,8 @@ function clickFunction(choice){
             console.log("00");
             document.getElementById("3").innerHTML = "Beide entkommen den Tod";
             buttondisable();
-            clickCounter(6);
-            clickCounter2(6);
+            Punkte1(6);
+            Punkte2(6);
             ena();
             break;
     
@@ -90,8 +91,8 @@ function clickFunction(choice){
             console.log("10");
             document.getElementById("3").innerHTML = "Gegner versucht auszuweichen. Spieler fährt weiter. Spieler gewinnt";
             buttondisable();
-            clickCounter(8);
-            clickCounter2(2);
+            Punkte1(8);
+            Punkte2(2);
             ena();
             break;
     
@@ -99,15 +100,14 @@ function clickFunction(choice){
             console.log("01");
             document.getElementById("3").innerHTML = "Spieler versucht auszuweichen. Gegner fährt weiter. Gegner gewinnt";
             buttondisable();
-            clickCounter(2);
-            clickCounter2(8);
+            Punkte1(2);
+            Punkte2(8);
             ena();
             break;     
         
         default:
             document.getElementById("3").innerHTML = ":/";
             buttondisable();
-            clickCounter();
             ena();
             break
     
