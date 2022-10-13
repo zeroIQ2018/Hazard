@@ -3,6 +3,8 @@ var amount;
 var amount2;
 var y = Math.random();
 console.log(localStorage.getItem("opnr"));
+var n1 = localStorage.getItem("cl1");
+var n2 = localStorage.getItem("cl2");
 if (y < 0.5){
     y = 0;
     }
@@ -31,14 +33,19 @@ function buttondisable()
     document.getElementById("btn1").disabled=true;
 }
 
-
+function cleardata()
+{
+  localStorage.removeItem("cl1");
+  localStorage.removeItem("cl2");
+  console.log("yesitworks");
+}
 
 function Punkte1(amount) 
 {
   if (localStorage.getItem('opnr') == 1) 
-  {   
-      localStorage.cl1 + amount
-      document.getElementById("z").innerHTML = "Du hast " + localStorage.cl1 + " Punkte";
+  { 
+    localStorage.setItem("cl1",n1*1 + amount)
+    document.getElementById("z").innerHTML = "Du hast " + localStorage.getItem("cl1") + " Punkte";
   } 
   
 
@@ -53,12 +60,12 @@ function Punkte1(amount)
     if (localStorage.getItem('opnr') == 1) 
     {     
 
-      localStorage.cl2 + amount2
-      document.getElementById("x").innerHTML = "Er hat " + localStorage.cl2 + " Punkte";
+      localStorage.setItem("cl2", n2*1 + amount2)
+      document.getElementById("x").innerHTML = "Er hat " + localStorage.getItem("cl2") + " Punkte";
     }
 
     else{
-      document.getElementById("x").innerHTML = "Er hat " + amount2+ " Punkte";
+      document.getElementById("x").innerHTML = "Er hat " + amount2 + " Punkte";
     }
   }
 
