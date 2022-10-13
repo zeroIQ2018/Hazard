@@ -2,7 +2,6 @@ var choice;
 var amount;
 var amount2;
 var y = Math.random();
-console.log(localStorage.getItem("opnr"));
 var n1 = localStorage.getItem("cl1");
 var n2 = localStorage.getItem("cl2");
 if (y < 0.5){
@@ -37,7 +36,6 @@ function cleardata()
 {
   localStorage.removeItem("cl1");
   localStorage.removeItem("cl2");
-  console.log("yesitworks");
 }
 
 function Punkte1(amount) 
