@@ -1,4 +1,4 @@
-if(localStorage.getItem("Opnr") == 1){
+if(localStorage.getItem("opnr") == 1){
     document.getElementById("state").innerHTML ="Punkte speicher ist aus"
 }
 else{
@@ -19,6 +19,9 @@ function opse() {
             console.log(localStorage.getItem("opnr"));
             break
         
+        case (localStorage.getItem("opnr") == undefined):
+            localStorage.setItem("opnr", 0)
+
         default:
             console.log("default");
     }
