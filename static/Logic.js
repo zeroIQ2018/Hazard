@@ -20,6 +20,10 @@ else
   document.getElementById("cur").innerHTML = "Punkte Speichern ist an"
 }
 
+function gify(){
+  document.createElement("")
+}
+
 function ena()
 {
   document.getElementById("dis").disabled=false
